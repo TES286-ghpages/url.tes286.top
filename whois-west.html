@@ -1,0 +1,39 @@
+<!-- 如有问题,请发邮件至admin@tes286.site -->
+<html>
+<head><title>loading</title></head>
+<body>
+<script>
+//获取参数
+Request = function()
+{
+var url = location.search;
+var theRequest = new Object();
+if (url.indexOf("?") != -1)
+{
+var str = url.substr(1);
+strs = str.split("&");
+for(var i = 0; i < strs.length; i ++)
+{
+theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+}
+}
+return theRequest;
+}();
+url = Request.url;
+
+//正则提取部分
+var regex = /([0-9a-zA-Z_-]\.)+?[0-9a-zA-Z_-]/;
+host = url.match(regex)[0];
+
+//跳转
+if(host == undefined)
+{
+alert('网址格式存在问题,如有问题,请发信至admin@tes286.site或参考url.tes286.top/docs/whois-west');
+}
+else
+{
+location.href = "https://whois.west.cn/" + host;
+}
+</script>
+</body>
+</html>
