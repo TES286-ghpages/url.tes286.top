@@ -22,8 +22,8 @@ return theRequest;
 url = Request.url;
 
 //正则提取部分
-var regex = /([0-9a-zA-Z_-]\.)+[0-9a-zA-Z_-]+/;
-_host = url.match(regex)[0];
+var regex = /([0-9a-zA-Z_-]|\.)+[0-9a-zA-Z_-]+/;
+_host = url.match(regex);
 
 //跳转
 if(_host == undefined)
