@@ -8,6 +8,19 @@
 <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<amp-analytics type="gtag" data-credentials="include">
+<script type="application/json">
+{
+  "vars" : {
+    "gtag_id": "G-YNE3H6FF9S",
+    "config" : {
+      "G-YNE3H6FF9S": { "groups": "default" , "site_speed_sample_rate": 100}
+    }
+  }
+}
+</script>
+</amp-analytics>
 </head>
 <body>
 <script>
@@ -34,7 +47,7 @@ var regex = /([0-9a-zA-Z_-]|\.)+[0-9a-zA-Z_-]+/;
 _host = url.match(regex);
 
 //跳转
-if(_host == undefined)
+if(_host == undefined | url == undefined)
 {
 alert('网址格式存在问题,如有问题,请发信至admin@tes286.site或参考url.tes286.top/docs/whois-west');
 }
